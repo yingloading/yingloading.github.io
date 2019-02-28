@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>my-first-blog | Hexo</title>
+  <title>nginx - 通过反向代理配置vue项目 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="my-first-blog">
-<meta property="og:url" content="http://yoursite.com/2019/02/28/my-first-blog/index.html">
+  <meta name="description" content="一, 下载安装nginx .">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx - 通过反向代理配置vue项目">
+<meta property="og:url" content="http://yoursite.com/2019/02/28/nginx-通过反向代理配置vue项目/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一, 下载安装nginx .">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-28T00:43:49.512Z">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/007rAy9hgy1g0m6zm33ldj30qi0onabz.jpg">
+<meta property="og:image" content="https://ww1.sinaimg.cn/large/007rAy9hgy1g0m757mbhtj30in0bzmxj.jpg">
+<meta property="og:updated_time" content="2019-02-28T08:11:20.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my-first-blog">
+<meta name="twitter:title" content="nginx - 通过反向代理配置vue项目">
+<meta name="twitter:description" content="一, 下载安装nginx .">
+<meta name="twitter:image" content="https://ww1.sinaimg.cn/large/007rAy9hgy1g0m6zm33ldj30qi0onabz.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -151,27 +157,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-blog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-nginx-通过反向代理配置vue项目" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my-first-blog
+      nginx - 通过反向代理配置vue项目
     </h1>
   
 
         
-        <a href="/2019/02/28/my-first-blog/" class="archive-article-date">
-  	<time datetime="2019-02-28T00:43:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-28</time>
+        <a href="/2019/02/28/nginx-通过反向代理配置vue项目/" class="archive-article-date">
+  	<time datetime="2019-02-28T07:39:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="一-下载安装nginx"><a href="#一-下载安装nginx" class="headerlink" title="一, 下载安装nginx ."></a>一, 下载安装nginx .</h2><a id="more"></a>
+<h4 id="1-从nginx官网上下载nginx-下载地址-nginx下载地址"><a href="#1-从nginx官网上下载nginx-下载地址-nginx下载地址" class="headerlink" title="1,从nginx官网上下载nginx,下载地址: nginx下载地址"></a>1,从nginx官网上下载nginx,下载地址: <a href="http://nginx.org/en/download.html" target="_blank" rel="noopener">nginx下载地址</a></h4><h5 id="8195-8195-根据自己的服务器类型选择对应的版本下载"><a href="#8195-8195-根据自己的服务器类型选择对应的版本下载" class="headerlink" title="&#8195;&#8195;根据自己的服务器类型选择对应的版本下载"></a>&#8195;&#8195;根据自己的服务器类型选择对应的版本下载</h5><p><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0m6zm33ldj30qi0onabz.jpg" alt="nginx">  </p>
+<h4 id="2-解压下载的nginx到你要安装的目录-打开编辑conf文件夹下的nginx-conf文件"><a href="#2-解压下载的nginx到你要安装的目录-打开编辑conf文件夹下的nginx-conf文件" class="headerlink" title="2,解压下载的nginx到你要安装的目录.打开编辑conf文件夹下的nginx.conf文件."></a>2,解压下载的nginx到你要安装的目录.打开编辑conf文件夹下的nginx.conf文件.</h4><p><img src="https://ww1.sinaimg.cn/large/007rAy9hgy1g0m757mbhtj30in0bzmxj.jpg" alt="配置文件"></p>
+<p>&#8195;&#8195;把更改配置为:　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">#error_log  logs/error.log;</span><br><span class="line">#error_log  logs/error.log  notice;</span><br><span class="line">#error_log  logs/error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    #log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">    #                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">    #                  &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line"></span><br><span class="line">    #access_log  logs/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    #keepalive_timeout  0;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    #gzip  on;</span><br><span class="line">    #隐藏Nginx版本信息，禁止网站目录浏览</span><br><span class="line">    server_tokens off;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  www.xxxx.com; #网站域名(如果服务器是国内的还需要进行域名备案.)</span><br><span class="line"></span><br><span class="line">         #编码格式</span><br><span class="line">        charset utf-8;</span><br><span class="line"></span><br><span class="line">        #代理配置参数</span><br><span class="line">        proxy_connect_timeout 180;#连接超时时间</span><br><span class="line">        proxy_send_timeout 180;#发送请求超时时间</span><br><span class="line">        proxy_read_timeout 180;#读取请求超时时间</span><br><span class="line">        proxy_set_header Host $host;#设置转发请求头</span><br><span class="line">        proxy_set_header X-Forwarder-For $remote_addr;</span><br><span class="line"></span><br><span class="line">        #反向代理的路径（和projectName绑定），location 后面设置映射的路径</span><br><span class="line">        location  /projectName &#123;</span><br><span class="line">            proxy_pass http://127.0.0.1:8080/projectName;</span><br><span class="line">            proxy_http_version 1.1;#http协议版本</span><br><span class="line">            proxy_set_header Upgrade $http_upgrade;#websocket相关</span><br><span class="line">             proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8080;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        root   D:\xx\xxx;#项目根目录</span><br><span class="line"></span><br><span class="line">        #charset koi8-r;</span><br><span class="line"></span><br><span class="line">        #access_log  logs/host.access.log  main;</span><br><span class="line">        #projectName为项目名称,也是文件夹名称</span><br><span class="line">        location /projectName &#123;</span><br><span class="line">            try_files $uri $uri/projectName /projectName/index.html;</span><br><span class="line">            index  projectName/index.html projectName/index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">        location @router &#123;</span><br><span class="line">            rewrite ^.*$ /projectName/index.html last;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="8195-8195-3-启动或者重新加载nginx配置"><a href="#8195-8195-3-启动或者重新加载nginx配置" class="headerlink" title="&#8195;&#8195;3,启动或者重新加载nginx配置."></a>&#8195;&#8195;3,启动或者重新加载nginx配置.</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在nginx解压的根目录打开命令行窗口()即cmd窗口)</span><br><span class="line"></span><br><span class="line">　　　　启动: start nginx</span><br><span class="line"></span><br><span class="line">　　　　停止 start -s stop</span><br><span class="line"></span><br><span class="line">　　　　重新加载配置: start -s reload</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -250,7 +261,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/28/my-first-blog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/28/nginx-通过反向代理配置vue项目/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,18 +275,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/02/28/123456/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          12354566
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/02/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/02/28/123456/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">12354566</div>
       <i class="icon-circle-right"></i>
     </a>
   
